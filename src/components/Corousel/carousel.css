@@ -1,0 +1,8 @@
+.caro {
+    height: 650px;
+    width: 100%;
+}
+
+.carousel-inner {
+    height: 650px !important;
+}

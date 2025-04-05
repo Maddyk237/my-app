@@ -1,0 +1,73 @@
+.navbar {
+    height: 52px;
+    background-color: black;
+    width: 100%;
+    display: flex;
+}
+
+.navdiv1 {
+    width: 30%;
+    margin-top: -2px;
+    /* background-color: aliceblue; */
+}
+
+.navdiv1 h3 {
+    margin: 10px 85px;
+    color: lavenderblush;
+}
+
+.navdiv1 h3:hover {
+    cursor: pointer;
+}
+
+.navdiv2 {
+    width: 40%;
+    /* background-color: rgb(33, 89, 139); */
+}
+
+.navdiv2 ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    margin-top: 12px;
+}
+
+.navdiv2 ul li a:hover {
+    color: rgb(210, 232, 88);
+    cursor: pointer;
+    transition: 5ms delay;
+}
+
+.navdiv2 ul li a {
+    text-decoration: none;
+    margin: 0 40px;
+    color: white;
+}
+
+.navdiv3 {
+    width: 30%;
+    margin-top: 15px;
+    /* background-color: rgb(109, 34, 101); */
+}
+
+.navdiv3 ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+}
+
+.navdiv3 ul li {
+    margin: -3px 20px;
+}
+
+.navdiv3 ul li a {
+    text-decoration: none;
+    padding: 2px solid rgb(177, 216, 177);
+    color: white;
+}
+
+.navdiv3 ul li a:hover {
+    color: rgb(210, 232, 88);
+    cursor: pointer;
+    transition: 5ms delay;
+}

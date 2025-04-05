@@ -1,0 +1,55 @@
+.signuptext h2 {
+    margin-top: 100px;
+    text-align: center;
+}
+
+.signuppage {
+    background-image: url("../../../assets/images/SignUpbg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.labeltextarea {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.labeltextarea label {
+    font-weight: bold;
+    margin: 20px;
+}
+
+.labeltextarea button {
+    margin-top: 25px;
+    border-radius: 20px;
+    padding: 5px 15px;
+    background-color: black;
+    color: white;
+}
+
+.labeltextarea button:hover {
+    background-color: white;
+    color: black;
+    transition: 300ms;
+}
+
+.labeltextarea input {
+    border-radius: 15px;
+    width: 200px;
+    padding: 0px 20px;
+}
+
+.hrrule {
+    width: 25%;
+    height: 5px;
+    background-color: black;
+    border: none;
+    margin: 20px auto;
+}

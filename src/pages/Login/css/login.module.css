@@ -1,0 +1,48 @@
+.loginlabel {
+    text-align: center;
+    margin-top: 150px;
+}
+
+.loginform {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.loginform label {
+    margin: 20px;
+    padding: 0px 20px;
+    font-weight: bold;
+}
+
+.loginform input {
+    border-radius: 20px;
+    padding: 2px 15px;
+    width: 160px;
+}
+
+.loginbutton {
+    margin: 15px;
+    border-radius: 20px;
+    padding: 5px 15px;
+    background-color: black;
+    color: white;
+}
+
+.loginbutton:hover {
+    background-color: white;
+    color: black;
+    transition: 300ms;
+}
+
+.hrrule {
+    width: 25%;
+    height: 5px;
+    background-color: black;
+    border: none;
+    margin: 20px auto;
+}
+
+.eyeicon {
+    border: none;
+    background-color: white;
+}
