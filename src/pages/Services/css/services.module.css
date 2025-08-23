@@ -1,0 +1,9 @@
+.header {
+    color: black;
+    padding: 15px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    padding-left: 70px;
+    font-weight: 500;
+}

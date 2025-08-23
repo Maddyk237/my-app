@@ -1,55 +1,103 @@
 .signuptext h2 {
-    margin-top: 100px;
+    margin-top: 80px;
     text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
 }
 
-.signuppage {
-    background-image: url("../../../assets/images/SignUpbg.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100vw;
-    height: 100vh;
+.login {
+    padding: 40px 70px;
+    background-color: rgba(255, 255, 255, 0.9);
+    /* semi-transparent */
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(6px);
+    z-index: 1;
+}
+
+.header {
     display: flex;
     justify-content: center;
-    align-items: center;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    font-weight: bold;
 }
-
 
 .labeltextarea {
     text-align: center;
-    margin-top: 50px;
+    margin-top: 10px;
 }
 
 .labeltextarea label {
-    font-weight: bold;
-    margin: 20px;
+    font-weight: 600;
+    margin: 10px;
+    display: block;
+    font-size: 1rem;
+}
+
+.labeltextarea input {
+    border-radius: 6px;
+    width: 220px;
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    margin-top: 8px;
 }
 
 .labeltextarea button {
     margin-top: 25px;
-    border-radius: 20px;
-    padding: 5px 15px;
+    border-radius: 25px;
+    padding: 10px 20px;
     background-color: black;
     color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
 }
 
 .labeltextarea button:hover {
     background-color: white;
     color: black;
-    transition: 300ms;
-}
-
-.labeltextarea input {
-    border-radius: 15px;
-    width: 200px;
-    padding: 0px 20px;
+    border: 1px solid black;
 }
 
 .hrrule {
     width: 25%;
-    height: 5px;
+    height: 4px;
     background-color: black;
     border: none;
     margin: 20px auto;
+    border-radius: 2px;
+}
+
+.signuppage {
+    position: relative;
+    width: 100%;
+    height: 92.6vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.videoBackground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.overlay {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

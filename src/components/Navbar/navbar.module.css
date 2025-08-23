@@ -33,7 +33,7 @@
 }
 
 .navdiv2 ul li a:hover {
-    color: rgb(210, 232, 88);
+    color: #00ffff;
     cursor: pointer;
     transition: 5ms delay;
 }
@@ -67,7 +67,7 @@
 }
 
 .navdiv3 ul li a:hover {
-    color: rgb(210, 232, 88);
+    color: #00ffff;
     cursor: pointer;
     transition: 5ms delay;
 }

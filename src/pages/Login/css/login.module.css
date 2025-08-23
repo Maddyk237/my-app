@@ -1,48 +1,91 @@
 .loginlabel {
     text-align: center;
-    margin-top: 150px;
-}
-
-.loginform {
-    margin-top: 20px;
-    text-align: center;
-}
-
-.loginform label {
-    margin: 20px;
-    padding: 0px 20px;
+    margin-bottom: 30px;
+    font-size: 1.8rem;
     font-weight: bold;
 }
 
+.loginform {
+    text-align: center;
+    padding: 40px 55px;
+    background-color: rgba(255, 255, 255, 0.85);
+    /* transparent white */
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+    z-index: 1;
+}
+
+.loginform label {
+    display: block;
+    margin: 20px 0 8px;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
 .loginform input {
-    border-radius: 20px;
-    padding: 2px 15px;
-    width: 160px;
+    border-radius: 6px;
+    padding: 8px 10px;
+    width: 200px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
 }
 
 .loginbutton {
-    margin: 15px;
-    border-radius: 20px;
-    padding: 5px 15px;
+    margin-top: 20px;
+    border-radius: 25px;
+    padding: 8px 20px;
     background-color: black;
     color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
 }
 
 .loginbutton:hover {
     background-color: white;
     color: black;
-    transition: 300ms;
-}
-
-.hrrule {
-    width: 25%;
-    height: 5px;
-    background-color: black;
-    border: none;
-    margin: 20px auto;
+    border: 1px solid black;
 }
 
 .eyeicon {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
     border: none;
-    background-color: white;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.loginpage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 92.6vh;
+    /* background-image: url("https://images.pexels.com/photos/1446624/pexels-photo-1446624.jpeg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat; */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Optional: If you want to use a video instead */
+.videoBackground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.videoBackground video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
