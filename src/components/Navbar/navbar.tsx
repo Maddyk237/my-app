@@ -36,6 +36,9 @@ function Navbar() {
           <li>
             <Link to={"/services"}>Services</Link>
           </li>
+          <li>
+            <Link to={"/test"}>Test</Link>
+          </li>
         </ul>
       </div>
       <div className={styles.navdiv3}>
