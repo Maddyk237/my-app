@@ -1,0 +1,45 @@
+.bgImg {
+    width: 100%;
+    height: 92.5vh;
+    background: url("https://images.pexels.com/photos/355465/pexels-photo-355465.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.innerDiv {
+    height: 75vh;
+    width: 100%;
+    /* background-color: white; */
+    border-radius: 5%;
+    /* background-image: url("https://images.pexels.com/photos/1250260/pexels-photo-1250260.jpeg");
+        background-repeat: no-repeat;
+        background-size: cover; */
+}
+
+.header {
+    font-size: 25px;
+    color: white;
+    justify-content: center;
+    display: flex;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.aboutInfo {
+    font-size: 20px;
+    margin: 50px 100px 0px 100px;
+    color: white;
+    justify-content: center;
+    display: flex;
+}
+
+.contactInfo {
+    font-size: 20px;
+    margin: 50px 20px;
+    color: white;
+    justify-content: center;
+    display: flex;
+}
