@@ -1,0 +1,56 @@
+.page {
+    min-height: calc(100vh - 70px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(120deg, #f6f9fc, #eef2f7);
+    padding: 20px;
+}
+
+.formCard {
+    background: white;
+    width: 100%;
+    max-width: 450px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.formCard h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.formCard input,
+.formCard textarea {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 0.95rem;
+}
+
+.formCard input:focus,
+.formCard textarea:focus {
+    outline: none;
+    border-color: #ff7700;
+}
+
+.formCard button {
+    width: 100%;
+    background-color: #ff7700;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.formCard button:hover {
+    background-color: #e86600;
+}
