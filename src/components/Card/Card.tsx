@@ -5,6 +5,7 @@ import styles from "./css/card.module.css";
 import { useNavigate } from "react-router-dom";
 
 interface CardProps {
+  id?: any;
   image: string;
   title: string;
   subtitle: string;
@@ -13,6 +14,7 @@ interface CardProps {
 }
 
 const CardComponent: React.FC<CardProps> = ({
+  id,
   image,
   title,
   subtitle,
@@ -20,6 +22,9 @@ const CardComponent: React.FC<CardProps> = ({
   price,
 }) => {
   const navigate = useNavigate();
+  const storedUser = localStorage.getItem("user");
+  const user = storedUser ? JSON.parse(storedUser) : null;
+
   const header = (
     <img
       alt={title}
@@ -28,27 +33,39 @@ const CardComponent: React.FC<CardProps> = ({
     />
   );
 
+  const loginNavigation = () => {
+    if (!user) {
+      alert("Please login to book this package");
+      navigate("/login");
+      return;
+    }
+    navigate("/services/booking", {
+      state: {
+        image,
+        title,
+        subtitle,
+        description,
+        price,
+      },
+    });
+  };
+
   const footer = (
     <div className="flex justify-content-between gap-2 mt-3">
       <Button
-        label="Learn More"
+        label={user?.role === "admin" ? "Update Package" : "Learn More"}
         icon="pi pi-info-circle"
         className="p-button-outlined"
+        onClick={
+          user?.role === "admin"
+            ? () => navigate(`/editPackage/${id}`)
+            : loginNavigation
+        }
       />
       <Button
-        label="Book Now"
+        label={user?.role === "admin" ? "Delete Package" : "Book Now"}
         icon="pi pi-check"
-        onClick={() => {
-          navigate("/services/booking", {
-            state: {
-              image,
-              title,
-              subtitle,
-              description,
-              price,
-            },
-          });
-        }}
+        onClick={loginNavigation}
       />
     </div>
   );
