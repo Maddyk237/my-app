@@ -25,7 +25,7 @@ function Services() {
   return (
     <div>
       <Navbar />
-      <div className={styles.header}>Services</div>
+      <div className={styles.header}>Plan a Trip with Us !!</div>
 
       {loading ? (
         <Loader />
