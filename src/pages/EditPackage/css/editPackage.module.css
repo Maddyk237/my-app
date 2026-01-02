@@ -1,0 +1,96 @@
+.container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.card {
+    background: #ffffff;
+    width: 100%;
+    max-width: 520px;
+    padding: 30px 28px;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    color: #203a43;
+    margin-bottom: 25px;
+}
+
+.formGroup {
+    margin-bottom: 16px;
+}
+
+.formGroup label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 6px;
+}
+
+.formGroup input,
+.formGroup textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+.formGroup textarea {
+    resize: none;
+    height: 90px;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+    border-color: #2c5364;
+}
+
+.actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.updateBtn {
+    flex: 1;
+    background: #2c5364;
+    color: #fff;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.updateBtn:hover {
+    background: #203a43;
+}
+
+.cancelBtn {
+    flex: 1;
+    background: #e0e0e0;
+    color: #333;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.cancelBtn:hover {
+    background: #cfcfcf;
+}

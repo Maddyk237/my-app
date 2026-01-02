@@ -5,18 +5,12 @@ import { Link, useNavigate } from "react-router-dom";
 function Navbar() {
   const [userName, setUserName] = useState("");
   const navigate = useNavigate();
-
-  useEffect(() => {
-    const loggedInUser = localStorage.getItem("loggedInUser");
-    if (loggedInUser) {
-      const user = JSON.parse(loggedInUser);
-      setUserName(user.name || user.email);
-    }
-  }, []);
+  const storedUser = localStorage.getItem("user");
+  const user = storedUser ? JSON.parse(storedUser) : null;
 
   const handleLogout = () => {
-    localStorage.removeItem("loggedInUser");
-    setUserName("");
+    localStorage.removeItem("user");
+    localStorage.removeItem("token");
     navigate("/");
   };
 
@@ -42,24 +36,26 @@ function Navbar() {
         </ul>
       </div>
       <div className={styles.navdiv3}>
-        <ul>
-          {userName ? (
+        <ul className={styles.navList}>
+          {user ? (
             <>
-              <li style={{ color: "white", fontWeight: "bold" }}>
-                Welcome, {userName}
+              {user?.role === "admin" && (
+                <li>
+                  <button
+                    onClick={() => navigate("/addPackage")}
+                    className={styles.addPackageBtn}
+                  >
+                    + Add Package
+                  </button>
+                </li>
+              )}
+
+              <li className={styles.welcomeText}>
+                Hello, {user.name || user.email}
               </li>
+
               <li>
-                <button
-                  onClick={handleLogout}
-                  style={{
-                    background: "none",
-                    border: "none",
-                    color: "white",
-                    cursor: "pointer",
-                    fontWeight: "bold",
-                    marginLeft: "10px",
-                  }}
-                >
+                <button onClick={handleLogout} className={styles.logoutBtn}>
                   Logout
                 </button>
               </li>
