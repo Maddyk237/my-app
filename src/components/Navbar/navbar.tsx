@@ -28,11 +28,21 @@ function Navbar() {
             <Link to={"/about"}>About Us</Link>
           </li>
           <li>
-            <Link to={"/services"}>Services</Link>
+            <Link to={"/services"}>Plan a Trip</Link>
           </li>
-          <li>
+          {/* <li>
             <Link to={"/test"}>Test</Link>
-          </li>
+          </li> */}
+          {user &&
+            (user?.role === "admin" ? (
+              <li>
+                <Link to="/admin/bookings">Trips</Link>
+              </li>
+            ) : (
+              <li>
+                <Link to={"/my-trips"}>My Trips</Link>
+              </li>
+            ))}
         </ul>
       </div>
       <div className={styles.navdiv3}>

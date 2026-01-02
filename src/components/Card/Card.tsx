@@ -3,6 +3,7 @@ import { Card } from "primereact/card";
 import { Button } from "primereact/button";
 import styles from "./css/card.module.css";
 import { useNavigate } from "react-router-dom";
+import api from "../../services/api";
 
 interface CardProps {
   id?: any;
@@ -41,6 +42,7 @@ const CardComponent: React.FC<CardProps> = ({
     }
     navigate("/services/booking", {
       state: {
+        id,
         image,
         title,
         subtitle,
@@ -48,6 +50,18 @@ const CardComponent: React.FC<CardProps> = ({
         price,
       },
     });
+  };
+  const handleDelete = async () => {
+    if (!window.confirm("Are you sure you want to delete this package?"))
+      return;
+
+    try {
+      await api.delete(`/packages/${id}`);
+      alert("Package deleted successfully");
+      window.location.reload();
+    } catch (error) {
+      alert("Failed to delete package");
+    }
   };
 
   const footer = (
@@ -65,7 +79,7 @@ const CardComponent: React.FC<CardProps> = ({
       <Button
         label={user?.role === "admin" ? "Delete Package" : "Book Now"}
         icon="pi pi-check"
-        onClick={loginNavigation}
+        onClick={user?.role === "admin" ? handleDelete : loginNavigation}
       />
     </div>
   );

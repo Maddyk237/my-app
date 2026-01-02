@@ -34,3 +34,36 @@
     line-height: 1.8;
     color: #333;
 }
+
+.bookingForm {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.bookingForm label {
+    font-weight: 600;
+}
+
+.bookingForm input {
+    padding: 8px 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.bookBtn {
+    margin-top: 15px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #ff7a18, #ff9f1c);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.bookBtn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
